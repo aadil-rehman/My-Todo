@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+<div class = "container">
+	<h1>My Todo </h1>
+
+	<form id = "task-box" action="/" method="post">
+		<input  type="text" name="task" placeholder="Creat a new todo" required />
+		<button type="submit">Create</button>
+	</form>
+
+	<ul class="list">
+		<% for(let i = todos.length-1; i >= 0; i--){ %>
+		<li	<form  action="/" method="post">
+		<li class = "list-item"><%= todos[i] %></li>
+		<% } %>
+	</ul>
+
+
+</div>
+
+<%- include("partials/footer.ejs") %>
