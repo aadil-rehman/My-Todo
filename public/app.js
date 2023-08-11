@@ -22,7 +22,7 @@ async function deleteTask(todoId) {
     // get the id of the task whose checkbox is clicked
 
     // call the api with that id
-    const response = await fetch(`http://localhost:3000/todos/${todoId}`, {
+    const response = await fetch(`https://${window.location.hostname}/todos/${todoId}`, {
         method: "DELETE",
     });
 
