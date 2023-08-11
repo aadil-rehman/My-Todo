@@ -9,12 +9,12 @@
 
 	<ul class="list">
 		<% for(let i = todos.length-1; i >= 0; i--){ %>
-		<li	<form  action="/" method="post">
-		<li class = "list-item"><%= todos[i] %></li>
+		<li class="list-item">
+			<input data-taskid="<%= todos[i].id %>" class="checkbox" type="checkbox" name="todo" />
+			<span><%= todos[i].name %></span>
+		</li>
 		<% } %>
 	</ul>
-
-
 </div>
 
 <%- include("partials/footer.ejs") %>
